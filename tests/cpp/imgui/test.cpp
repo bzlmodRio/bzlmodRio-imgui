@@ -1,8 +1,6 @@
 
-#include "gtest/gtest.h"
-
 #include <imgui.h>
 
-TEST(BasicTest, BasicTest) {
-    EXPECT_NE(IMGUI_VERSION, "0");
-}
+#include "gtest/gtest.h"
+
+TEST(BasicTest, Basic) { EXPECT_NE(IMGUI_VERSION, "0"); }

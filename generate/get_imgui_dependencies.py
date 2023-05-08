@@ -1,22 +1,21 @@
-import sys
-import os
-
 from bazelrio_gentool.deps.dependency_container import DependencyContainer
 
 
 def _default_native_static_platforms():
     platforms = [
+        "linuxarm32",
+        "linuxarm64",
         "linuxx86-64",
-        "osxx86-64",
+        "osxuniversal",
         "windowsx86-64",
         "windowsx86",
     ]
-    return [x + "static" for x in platforms]
+    return [x + "static" for x in platforms] + [x + "staticdebug" for x in platforms]
 
 
 def get_imgui_dependencies():
-    year = "2022"
-    version = "1.86-1"
+    year = "2023"
+    version = "1.89.1-1"
 
     group_id = f"edu.wpi.first.thirdparty.frc{year}"
 
