@@ -1,22 +1,24 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
 cc_library(
     name = "static",
     linkstatic = 1,
     target_compatible_with = select({
-        "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@platforms//:incompatible"],
         "@rules_bzlmodrio_toolchains//constraints/is_raspi32:raspi32": ["@platforms//:incompatible"],
+        "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@platforms//:incompatible"],
         "//conditions:default": [],
     }),
     visibility = ["@bzlmodrio-imgui//:__subpackages__"],
     deps = ["@bazelrio_edu_wpi_first_thirdparty_frc_imgui_headers//:headers"] + select({
-        "@rules_bzlmodrio_toolchains//constraints/is_bullseye32:bullseye32": ["@bazelrio_edu_wpi_first_thirdparty_frc_imgui_linuxarm32static//:static_libs"],
-        "@rules_bzlmodrio_toolchains//constraints/is_bullseye64:bullseye64": ["@bazelrio_edu_wpi_first_thirdparty_frc_imgui_linuxarm64static//:static_libs"],
         "@rules_bazelrio//conditions:linux_x86_64": ["@bazelrio_edu_wpi_first_thirdparty_frc_imgui_linuxx86-64static//:static_libs"],
-        "@rules_bazelrio//conditions:osx": ["@bazelrio_edu_wpi_first_thirdparty_frc_imgui_osxuniversalstatic//:static_libs"],
-        "@rules_bazelrio//conditions:windows": ["@bazelrio_edu_wpi_first_thirdparty_frc_imgui_windowsx86-64static//:static_libs"],
-        "@rules_bzlmodrio_toolchains//constraints/is_bullseye32:bullseye32_debug": ["@bazelrio_edu_wpi_first_thirdparty_frc_imgui_linuxarm32staticdebug//:static_libs"],
-        "@rules_bzlmodrio_toolchains//constraints/is_bullseye64:bullseye64_debug": ["@bazelrio_edu_wpi_first_thirdparty_frc_imgui_linuxarm64staticdebug//:static_libs"],
         "@rules_bazelrio//conditions:linux_x86_64_debug": ["@bazelrio_edu_wpi_first_thirdparty_frc_imgui_linuxx86-64staticdebug//:static_libs"],
+        "@rules_bazelrio//conditions:osx": ["@bazelrio_edu_wpi_first_thirdparty_frc_imgui_osxuniversalstatic//:static_libs"],
         "@rules_bazelrio//conditions:osx_debug": ["@bazelrio_edu_wpi_first_thirdparty_frc_imgui_osxuniversalstaticdebug//:static_libs"],
+        "@rules_bazelrio//conditions:windows": ["@bazelrio_edu_wpi_first_thirdparty_frc_imgui_windowsx86-64static//:static_libs"],
         "@rules_bazelrio//conditions:windows_debug": ["@bazelrio_edu_wpi_first_thirdparty_frc_imgui_windowsx86-64staticdebug//:static_libs"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bullseye32:bullseye32": ["@bazelrio_edu_wpi_first_thirdparty_frc_imgui_linuxarm32static//:static_libs"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bullseye32:bullseye32_debug": ["@bazelrio_edu_wpi_first_thirdparty_frc_imgui_linuxarm32staticdebug//:static_libs"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bullseye64:bullseye64": ["@bazelrio_edu_wpi_first_thirdparty_frc_imgui_linuxarm64static//:static_libs"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bullseye64:bullseye64_debug": ["@bazelrio_edu_wpi_first_thirdparty_frc_imgui_linuxarm64staticdebug//:static_libs"],
     }),
 )
