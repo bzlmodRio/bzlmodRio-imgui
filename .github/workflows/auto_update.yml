@@ -1,8 +1,9 @@
 name: Auto Update
 on:
-  push:
-    branches-ignore:
-      - 'autoupdate'
+  workflow_dispatch:
+  schedule:
+    # Check on Mondays and Thursdays
+    - cron:  '0 0 * * 1,4'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
@@ -61,7 +62,7 @@ jobs:
         if [[ $(git --no-pager diff --exit-code HEAD) != '' ]]; then
           echo "Something changed, need to re-generate"
           bazel run //:generate
-          buildifier --lint=fix -r ..
+          buildifier -warnings all --lint=fix -r ..
         else
           echo "No changes!"
         fi;
