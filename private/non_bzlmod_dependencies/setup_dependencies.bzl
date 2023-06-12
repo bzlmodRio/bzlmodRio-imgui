@@ -1,7 +1,7 @@
 load("@bzlmodrio-imgui//:maven_cpp_deps.bzl", "setup_legacy_bzlmodrio_imgui_cpp_dependencies")
-load("@rules_bazelrio//:nonbzlmod_setup.bzl", "setup_rules_bazelrio")
 load("@rules_bzlmodrio_toolchains//:maven_deps.bzl", "setup_legacy_setup_toolchains_dependencies")
 load("@rules_bzlmodrio_toolchains//toolchains:load_toolchains.bzl", "load_toolchains")
+load("@rules_bazelrio//:nonbzlmod_setup.bzl", "setup_rules_bazelrio")
 
 def _setup_toolchains():
     setup_legacy_setup_toolchains_dependencies()
