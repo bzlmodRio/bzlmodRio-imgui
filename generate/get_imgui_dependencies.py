@@ -7,6 +7,7 @@ def _default_native_static_platforms():
         "linuxarm64",
         "linuxx86-64",
         "osxuniversal",
+        "windowsarm64",
         "windowsx86-64",
         "windowsx86",
     ]
@@ -15,7 +16,7 @@ def _default_native_static_platforms():
 
 def get_imgui_dependencies():
     year = "2023"
-    version = "1.89.1-1"
+    version = "1.89.1-2"
 
     group_id = f"edu.wpi.first.thirdparty.frc{year}"
 

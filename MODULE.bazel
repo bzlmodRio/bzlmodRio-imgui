@@ -1,6 +1,6 @@
 module(
     name = "bzlmodrio-imgui",
-    version = "1.89.1-1",
+    version = "1.89.1-2",
     compatibility_level = 2023,
 )
 
@@ -22,6 +22,8 @@ use_repo(
     "bazelrio_edu_wpi_first_thirdparty_frc_imgui_linuxx86-64staticdebug",
     "bazelrio_edu_wpi_first_thirdparty_frc_imgui_osxuniversalstatic",
     "bazelrio_edu_wpi_first_thirdparty_frc_imgui_osxuniversalstaticdebug",
+    "bazelrio_edu_wpi_first_thirdparty_frc_imgui_windowsarm64static",
+    "bazelrio_edu_wpi_first_thirdparty_frc_imgui_windowsarm64staticdebug",
     "bazelrio_edu_wpi_first_thirdparty_frc_imgui_windowsx86-64static",
     "bazelrio_edu_wpi_first_thirdparty_frc_imgui_windowsx86-64staticdebug",
     "bazelrio_edu_wpi_first_thirdparty_frc_imgui_windowsx86static",
