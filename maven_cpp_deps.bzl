@@ -80,92 +80,106 @@ def __setup_bzlmodrio_imgui_cpp_dependencies(mctx):
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_thirdparty_frc_imgui_headers",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/thirdparty/frc2023/imgui/1.89.1-1/imgui-1.89.1-1-headers.zip",
-        sha256 = "fa496c97819254fcace3acceb688b4ac2e169157fc017c8b1eaaed6ec48ada9c",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/thirdparty/frc2023/imgui/1.89.1-2/imgui-1.89.1-2-headers.zip",
+        sha256 = "9260203b3df31ff798ee6591b93e3490952a1e3d01090b3712083a78473a4a6f",
         build_file_content = cc_library_headers,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_thirdparty_frc_imgui_linuxarm32static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/thirdparty/frc2023/imgui/1.89.1-1/imgui-1.89.1-1-linuxarm32static.zip",
-        sha256 = "aad8f78a48a31ac9ddae9d051931a4f6c4f41c97704b7b906488048d2e553356",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/thirdparty/frc2023/imgui/1.89.1-2/imgui-1.89.1-2-linuxarm32static.zip",
+        sha256 = "672e7d4d1b78b4852a1bc94738366f45ab833f08574ca61f1e38f49521d45398",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_thirdparty_frc_imgui_linuxarm64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/thirdparty/frc2023/imgui/1.89.1-1/imgui-1.89.1-1-linuxarm64static.zip",
-        sha256 = "0a1fa8f6c16fcd6e5f5f97a121d6a6c7f8ee81992b806e47b55d7069c4f6d883",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/thirdparty/frc2023/imgui/1.89.1-2/imgui-1.89.1-2-linuxarm64static.zip",
+        sha256 = "50a2e5fabef50eb0f7b50d81c067a777922ba78af22f82484db83208efed2f74",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_thirdparty_frc_imgui_linuxx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/thirdparty/frc2023/imgui/1.89.1-1/imgui-1.89.1-1-linuxx86-64static.zip",
-        sha256 = "7024aa916fe82bd46ffe1a162164223d67e08310e3d81fd64e4e2adf51148903",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/thirdparty/frc2023/imgui/1.89.1-2/imgui-1.89.1-2-linuxx86-64static.zip",
+        sha256 = "053213f9b1acafb6df917dbcabe51d89a405f85953c1943df9162478e44b1032",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_thirdparty_frc_imgui_osxuniversalstatic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/thirdparty/frc2023/imgui/1.89.1-1/imgui-1.89.1-1-osxuniversalstatic.zip",
-        sha256 = "de02fd5208f8901efc94eb19a19b873775c97293fd0bf1818fa1638a1d58a5c2",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/thirdparty/frc2023/imgui/1.89.1-2/imgui-1.89.1-2-osxuniversalstatic.zip",
+        sha256 = "c705177408df0dd484e061a2a237c3bba7278eb4aec257e151b2f0e21a039820",
+        build_file_content = cc_library_static,
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_thirdparty_frc_imgui_windowsarm64static",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/thirdparty/frc2023/imgui/1.89.1-2/imgui-1.89.1-2-windowsarm64static.zip",
+        sha256 = "6222df248a93cbc4d0b1fe14350cd4713513e2cba01361f14726a692a8f2ca16",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_thirdparty_frc_imgui_windowsx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/thirdparty/frc2023/imgui/1.89.1-1/imgui-1.89.1-1-windowsx86-64static.zip",
-        sha256 = "1aa7aa58d81236dd61b5f27d32ab66347f8a8df681f299b79eeb5956d1ee5c15",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/thirdparty/frc2023/imgui/1.89.1-2/imgui-1.89.1-2-windowsx86-64static.zip",
+        sha256 = "0edb1cf95077f86ad17007f01b9c8bd1eedd9886719ac189c2d2639907ff2f79",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_thirdparty_frc_imgui_windowsx86static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/thirdparty/frc2023/imgui/1.89.1-1/imgui-1.89.1-1-windowsx86static.zip",
-        sha256 = "a21876e733dde8294f3ebb06432efa6c47c7bfb19a8a5f39124b9a32780019ae",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/thirdparty/frc2023/imgui/1.89.1-2/imgui-1.89.1-2-windowsx86static.zip",
+        sha256 = "693945ead0d310cdc13b53c548d1eae3ffbbb1c74b7848eaafeaaa946c7626fb",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_thirdparty_frc_imgui_linuxarm32staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/thirdparty/frc2023/imgui/1.89.1-1/imgui-1.89.1-1-linuxarm32staticdebug.zip",
-        sha256 = "0050c540a5df12af86b7d09ef80e1c8d94bffdf811c0635324c8085c4b072fb3",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/thirdparty/frc2023/imgui/1.89.1-2/imgui-1.89.1-2-linuxarm32staticdebug.zip",
+        sha256 = "c88c5ce22ec33211fe8efcb6812b43b08554e7b738e60499e1be801a03824fef",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_thirdparty_frc_imgui_linuxarm64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/thirdparty/frc2023/imgui/1.89.1-1/imgui-1.89.1-1-linuxarm64staticdebug.zip",
-        sha256 = "67a7c1c50b80ee375bf9431a7aa3a6d075b96be51202930c0d50e2fc854420ec",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/thirdparty/frc2023/imgui/1.89.1-2/imgui-1.89.1-2-linuxarm64staticdebug.zip",
+        sha256 = "d7119d3636b02f6a5c634f969e5b3c6c65a553989773764c62e308c4831d755e",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_thirdparty_frc_imgui_linuxx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/thirdparty/frc2023/imgui/1.89.1-1/imgui-1.89.1-1-linuxx86-64staticdebug.zip",
-        sha256 = "c6c847fe73067fab5a8168558cb5ea300fc109155ae47e03567c5d5bf418a00c",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/thirdparty/frc2023/imgui/1.89.1-2/imgui-1.89.1-2-linuxx86-64staticdebug.zip",
+        sha256 = "bb4b4486c173ab1b463416b43a0e3a8b89ac1315411b7ec82a19c41640e0a14c",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_thirdparty_frc_imgui_osxuniversalstaticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/thirdparty/frc2023/imgui/1.89.1-1/imgui-1.89.1-1-osxuniversalstaticdebug.zip",
-        sha256 = "5eba4dcd3ca89480c3bca0c3b2e8923f9c80722e3932a38abc32af310516cec3",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/thirdparty/frc2023/imgui/1.89.1-2/imgui-1.89.1-2-osxuniversalstaticdebug.zip",
+        sha256 = "33acac6f525ea4173513fade76834104bcfbabee0120aa73d4034bc0962f6724",
+        build_file_content = cc_library_static,
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_thirdparty_frc_imgui_windowsarm64staticdebug",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/thirdparty/frc2023/imgui/1.89.1-2/imgui-1.89.1-2-windowsarm64staticdebug.zip",
+        sha256 = "37e953acc2a625b744d1e7a9996c539e08b92f89cd3aee6be92082315aae1f57",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_thirdparty_frc_imgui_windowsx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/thirdparty/frc2023/imgui/1.89.1-1/imgui-1.89.1-1-windowsx86-64staticdebug.zip",
-        sha256 = "b27f49276de8b45f95c8eee4e217d965047c8e21e53c41b21fcf508e06ae18c9",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/thirdparty/frc2023/imgui/1.89.1-2/imgui-1.89.1-2-windowsx86-64staticdebug.zip",
+        sha256 = "5aa3d204d81b0b7a0900e953f74bf991d9c87f20ddbd0a41ab8bf049fbb1a45e",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_thirdparty_frc_imgui_windowsx86staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/thirdparty/frc2023/imgui/1.89.1-1/imgui-1.89.1-1-windowsx86staticdebug.zip",
-        sha256 = "eeeea8786bd4d6c8c9d05d60cd413d0334c9edae1628df61d3f8308437d6cca0",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/thirdparty/frc2023/imgui/1.89.1-2/imgui-1.89.1-2-windowsx86staticdebug.zip",
+        sha256 = "3871bccc6de7063b0f6630b070ac68bbabb5419218fdd9be71f4be4387735046",
         build_file_content = cc_library_static,
     )
 
