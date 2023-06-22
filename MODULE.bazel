@@ -1,6 +1,6 @@
 module(
     name = "bzlmodrio-imgui",
-    version = "1.89.1-1",
+    version = "1.89.1-2",
     compatibility_level = 2023,
 )
 
