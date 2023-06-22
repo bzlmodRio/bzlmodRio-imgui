@@ -53,6 +53,11 @@ jobs:
     - run: bazel run //:publish
       working-directory: libraries/bzlmodrio-imgui/generate
 
+    - name: Store version
+      run: echo "NEW_VERSION=$(bazel run //:get_version)" >> $GITHUB_ENV
+      working-directory: libraries/bzlmodrio-imgui/generate
+
+
     # Create pull requests
     - name: Create Gentool Pull Request
       uses: peter-evans/create-pull-request@v4
@@ -64,7 +69,7 @@ jobs:
         token: ${{ secrets.AUTO_UPDATE_KEY }}
         reviewers: pjreiniger
         branch: autoupdate/bzlmodrio-imgui_update
-        title: "Auto Update bzlmodrio-imgui module to ${GITHUB_REF_NAME}"
+        title: "Auto Update bzlmodrio-imgui module to '${{ env.NEW_VERSION }}'"
 
     - name: Create BCR Pull Request
       uses: peter-evans/create-pull-request@v4
@@ -76,4 +81,4 @@ jobs:
         token: ${{ secrets.AUTO_UPDATE_KEY }}
         reviewers: pjreiniger
         branch: autoupdate/bzlmodrio-imgui_update
-        title: "Auto Update latest bzlmodrio-imgui to ${GITHUB_REF_NAME}"
+        title: "Auto Update latest bzlmodrio-imgui to '${{ env.NEW_VERSION }}'"
