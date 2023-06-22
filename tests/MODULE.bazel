@@ -16,6 +16,18 @@ bazel_dep(name = "rules_wpiformat", version = "2022.30")
 bazel_dep(name = "rules_wpi_styleguide", version = "1.0.0")
 bazel_dep(name = "rules_spotless", version = "2.34.0")
 
+
+# TODO temporary
+git_override(
+    module_name = "rules_bazelrio",
+    commit = "99f9a0e4e8f84df0094de5080ac492e797be52c8",
+    remote = "https://github.com/bzlmodRio/bzlmodRio-rules_bazelrio",
+)
+# local_path_override(
+#     module_name = "rules_bazelrio",
+#     path = "C:/Users/PJ/git/bzlmodrio/monorepo/rules/rules_bazelrio",
+# )
+
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 maven.install(
     artifacts = [
