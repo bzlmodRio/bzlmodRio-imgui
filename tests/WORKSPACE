@@ -14,13 +14,6 @@ http_archive(
     urls = ["https://github.com/google/googletest/archive/release-1.12.1.zip"],
 )
 
-http_archive(
-    name = "rules_bazelrio",
-    sha256 = "bb3dc399897f715623953d140f8841bcf144ed4609768827f84b29441cbf0ad4",
-    strip_prefix = "rules_bazelrio-99f9a0e4e8f84df0094de5080ac492e797be52c8",
-    url = "https://github.com/bzlmodRio/bzlmodRio-rules_bazelrio/archive/99f9a0e4e8f84df0094de5080ac492e797be52c8.zip",
-)
-
 load("@bzlmodrio-imgui//private/non_bzlmod_dependencies:download_dependencies.bzl", "download_dependencies")
 
 download_dependencies()
