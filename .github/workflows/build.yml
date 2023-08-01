@@ -28,6 +28,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-python@v4
+      with: { python-version: '3.10.8' }
     - run: bazel ${{ matrix.bazel_options }} build -k ${{ matrix.config }} --config=remote @bzlmodrio-imgui//...
       working-directory: tests
     - run: bazel ${{ matrix.bazel_options }} build -k ${{ matrix.config }} --verbose_failures --config=remote //... || true
@@ -55,6 +56,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-python@v4
+      with: { python-version: '3.10.8' }
     - name: Build and allow failure # TODO Sometimes symlinks don't get created correctly the first time around
       run: bazel ${{ matrix.bazel_options }} ${{ matrix.command }} //... -k ${{ matrix.config }} --verbose_failures --config=remote || true
       working-directory: tests
@@ -80,6 +82,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-python@v4
+      with: { python-version: '3.10.8' }
     - name: Build and allow failure # TODO Sometimes symlinks don't get created correctly the first time around
       run: bazel ${{ matrix.bazel_options }} ${{ matrix.command }} //... -k ${{ matrix.config }} --verbose_failures --config=remote || true
       working-directory: tests
@@ -106,6 +109,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-python@v4
+      with: { python-version: '3.10.8' }
     - name: Build and allow failure # TODO Sometimes symlinks don't get created correctly the first time around
       run: bazel ${{ matrix.bazel_options }} ${{ matrix.command }} //... -k ${{ matrix.config }} --verbose_failures --config=remote || true
       working-directory: tests
