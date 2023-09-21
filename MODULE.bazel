@@ -1,7 +1,7 @@
 module(
     name = "bzlmodrio-imgui",
-    version = "1.89.1-2",
-    compatibility_level = 2023,
+    version = "1.89.9-1",
+    compatibility_level = 2024,
 )
 
 bazel_dep(name = "platforms", version = "0.0.7")
