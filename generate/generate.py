@@ -30,7 +30,6 @@ def main():
         group,
         mandatory_dependencies,
         test_macos=False,
-        include_windows_arm_compiler=True,
     )
     generate_group(output_dir, group, force_tests=args.force_tests)
 
