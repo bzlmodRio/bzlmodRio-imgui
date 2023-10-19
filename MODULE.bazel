@@ -1,6 +1,6 @@
 module(
     name = "bzlmodrio-imgui",
-    version = "1.89.9-1",
+    version = "2024.1.89.9-1",
     compatibility_level = 2024,
 )
 
@@ -8,7 +8,7 @@ bazel_dep(name = "platforms", version = "0.0.7")
 bazel_dep(name = "rules_cc", version = "0.0.8")
 bazel_dep(name = "rules_java", version = "6.4.0")
 bazel_dep(name = "rules_bazelrio", version = "0.0.13")
-bazel_dep(name = "rules_bzlmodrio_toolchains", version = "2023-7")
+bazel_dep(name = "rules_bzlmodrio_toolchains", version = "2024-1")
 
 setup_bzlmodrio_imgui_cpp_dependencies = use_extension("//:maven_cpp_deps.bzl", "setup_bzlmodrio_imgui_cpp_dependencies")
 use_repo(

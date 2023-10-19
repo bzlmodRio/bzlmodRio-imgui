@@ -33,6 +33,8 @@ def get_imgui_dependencies():
         has_jni=False,
     )
 
+    group.sanitized_version = year + "." + group.sanitized_version
+
     return group
 
 
