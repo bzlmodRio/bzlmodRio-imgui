@@ -16,7 +16,7 @@ cc_test(
         "no-sandbox",
     ],
     deps = [
-        "@bzlmodrio-imgui//libraries/cpp/imgui",
+        "@bzlmodrio-imgui//libraries/cpp/imgui:static",
         "@googletest//:gtest_main",
     ],
 )
