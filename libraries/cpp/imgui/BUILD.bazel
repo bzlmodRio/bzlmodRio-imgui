@@ -5,6 +5,12 @@ alias(
 )
 
 alias(
+    name = "header_files",
+    actual = "@bzlmodrio-imgui//private/cpp/imgui:header_files",
+    visibility = ["//visibility:public"],
+)
+
+alias(
     name = "static",
     actual = "@bzlmodrio-imgui//private/cpp/imgui:static",
     target_compatible_with = select({
